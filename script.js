@@ -27,6 +27,7 @@ var main = function (input) {
   } else if (gameMode == "SPS") {
     var baseUserInput = returnUserInput(input);
     // user validation that they have input the right input
+    // from 9 Oct Kelvin - actually we can make user validation into a helper function by using boolean. But kelvin's learning point was that he never toLowercase() the userInputs that go into the logic flow
     if (
       baseUserInput == "scissors" ||
       baseUserInput == "paper" ||
@@ -86,9 +87,9 @@ var decideResult = function (userInput, computerInput) {
   var result = "";
   // checks the user win condition
   if (
-    (userInput == "scissors" && computerInput == "paper") ||
-    (userInput == "paper" && computerInput == "stone") ||
-    (userInput == "stone" && computerInput == "scissors")
+    (userInput == "scissors ✂️" && computerInput == "paper 🧻") ||
+    (userInput == "paper 🧻" && computerInput == "stone 🪨") ||
+    (userInput == "stone 🪨" && computerInput == "scissors ✂️")
   ) {
     result = "user";
   }
